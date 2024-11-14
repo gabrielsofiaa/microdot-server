@@ -3,22 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad #</title>
+    <title>Control de Temperatura</title>
     <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <header>
-        <h1>Actividad #</h1>
+        <h1>Actividad N°3: Control de Temperatura</h1>
     </header>
     <main>
+        <div class="container">
+            <h2>Monitoreo de Temperatura</h2>
+
+            <!-- Temperature Display -->
+            <div class="card">
+                <p>Temperatura Actual:</p>
+                <span id="temperature-value" class="highlight">--</span> °C
+            </div>
+
+            <!-- Setpoint Slider -->
+            <div class="card">
+                <label for="setpoint-slider">Temperatura Deseada (Setpoint):</label>
+                <input type="range" id="setpoint-slider" min="0" max="100" value="25" oninput="updateSetpointValue(this.value)">
+                <span id="setpoint-value" class="highlight">25</span> °C
+            </div>
+
+            <!-- Buzzer Status -->
+            <div class="card">
+                <p>Estado del Buzzer:</p>
+                <span id="buzzer-state" class="highlight">--</span>
+            </div>
+        </div>
     </main>
+
     <footer>
         <p>Representación Frontal y Visual de Datos</p>
         <p>Computadoras de Aeronaves</p>
-        <p>Alumno XX</p>
-        <p>Prof. Carlassara Fabrizio</p>
+        <p>Sofía Gabriel</p>
+        <p>Prof. Fabrizio Carlassara</p>
         <p id="fecha"></p>
     </footer>
+
     <script src="scripts/base.js"></script>
+    <script src="scripts/index.js"></script>
 </body>
 </html>
